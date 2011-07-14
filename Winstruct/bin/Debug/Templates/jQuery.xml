@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaseFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>jQuery</Name>
+  <Shortcut>jq</Shortcut>
+  <Mode>1</Mode>
+  <Content>http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js</Content>
+</BaseFile>

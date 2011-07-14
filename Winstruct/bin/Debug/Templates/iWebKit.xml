@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaseFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>iWebKit</Name>
+  <Shortcut>iweb</Shortcut>
+  <Mode>1</Mode>
+  <Content>http://snippetspace.com/wp-content/plugins/download-monitor/download.php?id=1</Content>
+</BaseFile>

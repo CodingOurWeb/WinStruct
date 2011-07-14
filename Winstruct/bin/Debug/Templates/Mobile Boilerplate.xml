@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaseFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Mobile Boilerplate</Name>
+  <Shortcut>mbp</Shortcut>
+  <Mode>1</Mode>
+  <Content>https://github.com/shichuan/mobile-html5-boilerplate/zipball/v1.0stripped</Content>
+</BaseFile>

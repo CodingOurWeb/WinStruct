@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BaseFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>ReadMe</Name>
+  <Shortcut>readme</Shortcut>
+  <Mode>0</Mode>
+  <Content>This is my default readme text</Content>
+</BaseFile>

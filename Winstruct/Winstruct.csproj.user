@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectView>ProjectFiles</ProjectView>
+    <PublishUrlHistory>D:\Documenten\Visual Studio 2010\Projects\Winstruct\Winstruct\Install\|http://pc-rsd01.homeip.net/winstruct/|ftp://ftp.strato.com/winstruct/|http://www.boomaars.net/winstruct/|publish\</PublishUrlHistory>
+    <InstallUrlHistory>http://pc-rsd01.homeip.net/winstruct/|http://www.boomaars.net/winstruct/</InstallUrlHistory>
+    <SupportUrlHistory />
+    <UpdateUrlHistory />
+    <BootstrapperUrlHistory />
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>
