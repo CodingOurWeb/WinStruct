@@ -92,6 +92,8 @@
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -102,46 +104,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseFile.cs" />
-    <Compile Include="frmContentManager.cs">
+    <Compile Include="DAL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DAL.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ContentTemplate.cs" />
+    <Compile Include="Models\ProjectTemplate.cs" />
+    <Compile Include="Views\frmContentManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmContentManager.Designer.cs">
+    <Compile Include="Views\frmContentManager.Designer.cs">
       <DependentUpon>frmContentManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Views\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
+    <Compile Include="Views\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmProgress.cs">
+    <Compile Include="Views\frmProgress.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProgress.Designer.cs">
+    <Compile Include="Views\frmProgress.Designer.cs">
       <DependentUpon>frmProgress.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSettings.Designer.cs">
-      <DependentUpon>frmSettings.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Option.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Structure.cs" />
-    <EmbeddedResource Include="frmContentManager.resx">
+    <Compile Include="Models\Structure.cs" />
+    <EmbeddedResource Include="Views\frmContentManager.resx">
       <DependentUpon>frmContentManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
+    <EmbeddedResource Include="Views\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmProgress.resx">
+    <EmbeddedResource Include="Views\frmProgress.resx">
       <DependentUpon>frmProgress.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.resx">
-      <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -154,6 +154,17 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="DAL.xsc">
+      <DependentUpon>DAL.xsd</DependentUpon>
+    </None>
+    <None Include="DAL.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DAL.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DAL.xss">
+      <DependentUpon>DAL.xsd</DependentUpon>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,7 +175,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Winstruct_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -188,17 +198,10 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Install\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\DropNet\DropNet\DropNet.csproj">
-      <Project>{E9580EFC-6014-4D3B-82A8-5F6D57213CE4}</Project>
-      <Name>DropNet</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="setup7.ico" />
+    <EmbeddedResource Include="WinstructStore.sdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
