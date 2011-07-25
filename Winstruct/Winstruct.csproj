@@ -82,7 +82,7 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>setup7.ico</ApplicationIcon>
+    <ApplicationIcon>Windows Official.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Ionic.Zip">
@@ -201,6 +201,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="setup7.ico" />
+    <Content Include="Windows Official.ico" />
     <EmbeddedResource Include="WinstructStore.sdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

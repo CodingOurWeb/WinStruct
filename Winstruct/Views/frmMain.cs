@@ -34,6 +34,7 @@ namespace Winstruct
         {
             ProjectTemplate tpl = new ProjectTemplate();
 
+            txtTemplateName.Clear();
             cboTemplates.Items.Clear();
             cboTemplates.Items.Add("Custom");
             
@@ -148,8 +149,15 @@ namespace Winstruct
         {
             if (txtTemplateName.Text.Length == 0)
             {
-                MessageBox.Show("Please specify a name for this template!", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please provide a name for this template!", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTemplateName.Focus();
+                return;
+            }
+
+            if (txtStructure.Text.Length == 0)
+            {
+                MessageBox.Show("Please provide some content for this template!", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtStructure.Focus();
                 return;
             }
 
@@ -182,21 +190,6 @@ namespace Winstruct
             }
         }
 
-        private void btnDeleteTemplate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ProjectTemplate tpl = new ProjectTemplate();
-                if (tpl.delete(cboTemplates.SelectedItem.ToString()))
-                {
-                    FillTemplatesCombo();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error while deleting template '" + txtTemplateName.Text + "': " + ex.Message, "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         #region Events
         
@@ -266,6 +259,8 @@ namespace Winstruct
             /// <param name="e"></param>
             private void cboTemplates_SelectedIndexChanged(object sender, EventArgs e)
             {
+                txtTemplateName.Clear();
+
                 ProjectTemplate tpl = new ProjectTemplate();
                 txtStructure.Text = tpl.get(cboTemplates.Text);
 
@@ -273,11 +268,13 @@ namespace Winstruct
                 {
                     btnDeleteTemplate.Enabled = true;
                     btnCreate.Enabled = true;
+                    mnuCreateProject.Enabled = true;
                 }
                 else
                 {
                     btnDeleteTemplate.Enabled = false;
                     btnCreate.Enabled = false;
+                    mnuCreateProject.Enabled = false;
                 }
             }
 
@@ -299,6 +296,27 @@ namespace Winstruct
             private void btnSaveAsTemplate_Click(object sender, EventArgs e)
             {
                 SaveTemplate();
+            }
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="sender"></param>
+            /// <param name="e"></param>
+            private void btnDeleteTemplate_Click(object sender, EventArgs e)
+            {
+                try
+                {
+                    ProjectTemplate tpl = new ProjectTemplate();
+                    if (tpl.delete(cboTemplates.SelectedItem.ToString()))
+                    {
+                        FillTemplatesCombo();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while deleting template '" + txtTemplateName.Text + "': " + ex.Message, "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
             /// <summary>

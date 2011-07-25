@@ -34,18 +34,17 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.fileToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuNewProject = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCreateProject = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setBasePathToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSetBasePath = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.templateManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contentManagerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuContentManager = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtBasePath = new System.Windows.Forms.TextBox();
@@ -103,8 +102,8 @@
             // fileToolStripMenuItem1
             // 
             this.fileToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem3,
+            this.mnuNewProject,
+            this.mnuCreateProject,
             this.toolStripMenuItem2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem1.Name = "fileToolStripMenuItem1";
@@ -112,21 +111,24 @@
             this.fileToolStripMenuItem1.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem1.Text = "File";
             // 
-            // toolStripMenuItem4
+            // mnuNewProject
             // 
-            this.toolStripMenuItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem4.Image")));
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem4.Text = "New Project";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.clearStructure);
+            this.mnuNewProject.Image = ((System.Drawing.Image)(resources.GetObject("mnuNewProject.Image")));
+            this.mnuNewProject.Name = "mnuNewProject";
+            this.mnuNewProject.Size = new System.Drawing.Size(152, 22);
+            this.mnuNewProject.Text = "New Project";
+            this.mnuNewProject.Click += new System.EventHandler(this.clearStructure);
             // 
-            // toolStripMenuItem3
+            // mnuCreateProject
             // 
-            this.toolStripMenuItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem3.Image")));
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem3.Text = "Create Project";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.btnCreate_Click);
+            this.mnuCreateProject.Enabled = false;
+            this.mnuCreateProject.Image = ((System.Drawing.Image)(resources.GetObject("mnuCreateProject.Image")));
+            this.mnuCreateProject.Name = "mnuCreateProject";
+            this.mnuCreateProject.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
+                        | System.Windows.Forms.Keys.P)));
+            this.mnuCreateProject.Size = new System.Drawing.Size(212, 22);
+            this.mnuCreateProject.Text = "Create Project";
+            this.mnuCreateProject.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -144,42 +146,36 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setBasePathToolStripMenuItem,
+            this.mnuSetBasePath,
             this.toolStripSeparator1,
-            this.templateManagerToolStripMenuItem,
-            this.contentManagerToolStripMenuItem});
+            this.mnuContentManager});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.fileToolStripMenuItem.Text = "Project";
             // 
-            // setBasePathToolStripMenuItem
+            // mnuSetBasePath
             // 
-            this.setBasePathToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("setBasePathToolStripMenuItem.Image")));
-            this.setBasePathToolStripMenuItem.Name = "setBasePathToolStripMenuItem";
-            this.setBasePathToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.setBasePathToolStripMenuItem.Text = "Set Base Path...";
-            this.setBasePathToolStripMenuItem.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.mnuSetBasePath.Image = ((System.Drawing.Image)(resources.GetObject("mnuSetBasePath.Image")));
+            this.mnuSetBasePath.Name = "mnuSetBasePath";
+            this.mnuSetBasePath.Size = new System.Drawing.Size(176, 22);
+            this.mnuSetBasePath.Text = "Set Base Path...";
+            this.mnuSetBasePath.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(173, 6);
             // 
-            // templateManagerToolStripMenuItem
+            // mnuContentManager
             // 
-            this.templateManagerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("templateManagerToolStripMenuItem.Image")));
-            this.templateManagerToolStripMenuItem.Name = "templateManagerToolStripMenuItem";
-            this.templateManagerToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.templateManagerToolStripMenuItem.Text = "Template Manager";
-            // 
-            // contentManagerToolStripMenuItem
-            // 
-            this.contentManagerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("contentManagerToolStripMenuItem.Image")));
-            this.contentManagerToolStripMenuItem.Name = "contentManagerToolStripMenuItem";
-            this.contentManagerToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.contentManagerToolStripMenuItem.Text = "Content Manager...";
-            this.contentManagerToolStripMenuItem.Click += new System.EventHandler(this.btnContentManager_Click);
+            this.mnuContentManager.Image = ((System.Drawing.Image)(resources.GetObject("mnuContentManager.Image")));
+            this.mnuContentManager.Name = "mnuContentManager";
+            this.mnuContentManager.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt)
+                        | System.Windows.Forms.Keys.C)));
+            this.mnuContentManager.Size = new System.Drawing.Size(241, 22);
+            this.mnuContentManager.Text = "Content Manager...";
+            this.mnuContentManager.Click += new System.EventHandler(this.btnContentManager_Click);
             // 
             // menuStrip1
             // 
@@ -196,18 +192,18 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.mnuAbout});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.H)));
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
             this.helpToolStripMenuItem.Text = "Help";
             // 
-            // aboutToolStripMenuItem
+            // mnuAbout
             // 
-            this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
-            this.aboutToolStripMenuItem.Text = "About...";
+            this.mnuAbout.Image = ((System.Drawing.Image)(resources.GetObject("mnuAbout.Image")));
+            this.mnuAbout.Name = "mnuAbout";
+            this.mnuAbout.Size = new System.Drawing.Size(152, 22);
+            this.mnuAbout.Text = "About...";
             // 
             // groupBox1
             // 
@@ -367,12 +363,12 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem mnuNewProject;
+        private System.Windows.Forms.ToolStripMenuItem mnuCreateProject;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem contentManagerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuContentManager;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnBrowse;
@@ -380,13 +376,12 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem setBasePathToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuAbout;
+        private System.Windows.Forms.ToolStripMenuItem mnuSetBasePath;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox cboTemplates;
-        private System.Windows.Forms.ToolStripMenuItem templateManagerToolStripMenuItem;
         private System.Windows.Forms.TextBox txtTemplateName;
         private System.Windows.Forms.Button btnSaveAsTemplate;
         private System.Windows.Forms.Label label2;
