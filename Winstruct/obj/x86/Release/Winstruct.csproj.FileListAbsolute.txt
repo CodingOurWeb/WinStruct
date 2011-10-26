@@ -16,3 +16,4 @@ D:\Dropbox\Visual Studio 2010\Projects\Winstruct\Winstruct\obj\x86\Release\Winst
 D:\Dropbox\Visual Studio 2010\Projects\Winstruct\Winstruct\obj\x86\Release\Winstruct.application
 D:\Dropbox\Visual Studio 2010\Projects\Winstruct\Winstruct\obj\x86\Release\Winstruct.exe
 D:\Dropbox\Visual Studio 2010\Projects\Winstruct\Winstruct\obj\x86\Release\Winstruct.pdb
+D:\Dropbox\Visual Studio 2010\Projects\Winstruct\Winstruct\obj\x86\Release\Winstruct.Views.frmAboutBox.resources

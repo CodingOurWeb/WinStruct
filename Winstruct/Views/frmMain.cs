@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Collections;
 using System.Threading;
+using Winstruct.Views;
 
 namespace Winstruct
 {
@@ -141,20 +142,24 @@ namespace Winstruct
 
         /// <summary>
         /// Save the current listing as a template
-        /// 1. Template specified and Template name specified -> rename
-        /// 2. Template specified and Template name empty -> update
-        /// 3. Template is Custom and Template name specified -> create
         /// </summary>
         private void SaveTemplate()
         {
-            if (txtTemplateName.Text.Length == 0)
+            if (txtTemplateName.Text.Equals(cboTemplates.Text))
+            {
+                MessageBox.Show("This template name already exists! If you want to persist the changes just press the Save button and leave the Name field empty.", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtTemplateName.Clear();
+                return;    
+            }
+
+            if (txtTemplateName.Text.Length == 0 && cboTemplates.SelectedIndex == 0)
             {
                 MessageBox.Show("Please provide a name for this template!", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtTemplateName.Focus();
                 return;
             }
 
-            if (txtStructure.Text.Length == 0)
+            if (txtStructure.Text.Length == 0 && cboTemplates.SelectedIndex == 0)
             {
                 MessageBox.Show("Please provide some content for this template!", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtStructure.Focus();
@@ -165,9 +170,10 @@ namespace Winstruct
             {
                 ProjectTemplate tpl = new ProjectTemplate();
                 string oldTemplate = cboTemplates.Text;
-                if (cboTemplates.SelectedIndex > 0 && txtTemplateName.Text.Length > 0 && tpl.add(txtTemplateName.Text, txtStructure.Text))
+                
+                if (cboTemplates.SelectedIndex > 0 && txtTemplateName.Text.Length > 0 && txtTemplateName.Text.Equals(oldTemplate) == false && tpl.add(txtTemplateName.Text, txtStructure.Text))
                 {
-                    MessageBox.Show("Template '" + txtTemplateName.Text + "' was successfully renamed.", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Template '" + txtTemplateName.Text + "' was successfully created.", "WinStruct", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     FillTemplatesCombo();
                     cboTemplates.SelectedItem = txtTemplateName.Text;
                 }
@@ -335,8 +341,16 @@ namespace Winstruct
                     btnCreate.Enabled = false;
                 }
             }
+            
+            private void mnuAbout_Click(object sender, EventArgs e)
+            {
+                Form ab = new frmAboutBox();
+                ab.ShowDialog();
+            }
 
         #endregion
+
+
 
     }
 }

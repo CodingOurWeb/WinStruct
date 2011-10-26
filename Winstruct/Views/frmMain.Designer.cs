@@ -115,7 +115,7 @@
             // 
             this.mnuNewProject.Image = ((System.Drawing.Image)(resources.GetObject("mnuNewProject.Image")));
             this.mnuNewProject.Name = "mnuNewProject";
-            this.mnuNewProject.Size = new System.Drawing.Size(152, 22);
+            this.mnuNewProject.Size = new System.Drawing.Size(212, 22);
             this.mnuNewProject.Text = "New Project";
             this.mnuNewProject.Click += new System.EventHandler(this.clearStructure);
             // 
@@ -133,13 +133,13 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(209, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.Image")));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -158,14 +158,14 @@
             // 
             this.mnuSetBasePath.Image = ((System.Drawing.Image)(resources.GetObject("mnuSetBasePath.Image")));
             this.mnuSetBasePath.Name = "mnuSetBasePath";
-            this.mnuSetBasePath.Size = new System.Drawing.Size(176, 22);
+            this.mnuSetBasePath.Size = new System.Drawing.Size(241, 22);
             this.mnuSetBasePath.Text = "Set Base Path...";
             this.mnuSetBasePath.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(173, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(238, 6);
             // 
             // mnuContentManager
             // 
@@ -204,6 +204,7 @@
             this.mnuAbout.Name = "mnuAbout";
             this.mnuAbout.Size = new System.Drawing.Size(152, 22);
             this.mnuAbout.Text = "About...";
+            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // groupBox1
             // 

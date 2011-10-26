@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Windows Official.ico" asmv2:publisher="mb2o" co.v1:suiteName="Winstruct" asmv2:product="Winstruct" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="Winstruct" version="1.3.0.0" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="Winstruct" version="1.4.0.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="Winstruct.exe" parameters="" />
   </entryPoint>
   <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
@@ -66,14 +66,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Winstruct.exe" size="274944">
-      <assemblyIdentity name="Winstruct" version="1.3.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Winstruct.exe" size="309248">
+      <assemblyIdentity name="Winstruct" version="1.4.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5/YrSK8orfFVg/s6s22kHQElENo=</dsig:DigestValue>
+        <dsig:DigestValue>tskPS5CfOoR1pneQewbZu84rFPY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
